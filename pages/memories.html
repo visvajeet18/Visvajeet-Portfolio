@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memories - Visvajeet Raj</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Visual gallery and life memories of Visvajeet Raj. Highlights from engineering events, hackathons, and moments that inspire technology innovation." />
+    <meta name="keywords" content="Visvajeet Raj Memories, visvajeet, visvajeet engineer, visva, visva engineer, visvajeet raj engineer, visvajeet portfolio, visvajeet data scientist, visvajeet cyber security, Hackathons, Life Events, Engineering Journey, Student Gallery" />
+    <meta name="author" content="Visvajeet Raj" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visvajeet.netlify.app/pages/memories.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://visvajeet.netlify.app/pages/memories.html" />
+    <meta property="og:title" content="Life & Events | Visvajeet Raj Memories" />
+    <meta property="og:description" content="A visual timeline of key life achievements, projects, and personal highlights outside the development console." />
+    <meta property="og:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://visvajeet.netlify.app/pages/memories.html" />
+    <meta property="twitter:title" content="Life & Events | Visvajeet Raj Memories" />
+    <meta property="twitter:description" content="A visual timeline of key life achievements, projects, and personal highlights outside the development console." />
+    <meta property="twitter:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --accent-blue: #3b82f6;
+            --accent-teal: #10b981;
+            --accent-purple: #8b5cf6;
+            --text-heading: #f3f4f6;
+            --text-body: #9ca3af;
+            --border-light: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            overflow: hidden;
+        }
+
+        /* Floating Cyber Nodes */
+        .cyber-node {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 10px 1px var(--accent-blue);
+            animation: floatNode 20s infinite linear;
+            opacity: 0.3;
+        }
+
+        @keyframes floatNode {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(100px, 100px) rotate(120deg); }
+            66% { transform: translate(-50px, 200px) rotate(240deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            color: var(--text-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .page-subtitle {
+            color: var(--accent-teal);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .no-memories-placeholder {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 6rem 2rem;
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px dashed var(--border-light);
+            border-radius: 24px;
+            animation: fadeIn 1s ease;
+        }
+
+        .memory-card.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            visibility: visible !important;
+        }
+
+        body.admin-mode-active .admin-only-reset {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ambient-bg">
+        <div class="cyber-node" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="cyber-node" style="top: 40%; left: 80%; animation-delay: -5s;"></div>
+        <div class="cyber-node" style="top: 70%; left: 30%; animation-delay: -10s;"></div>
+        <div class="cyber-node" style="top: 20%; left: 60%; animation-delay: -15s;"></div>
+        <div class="cyber-node" style="top: 85%; left: 75%; animation-delay: -2s;"></div>
+    </div>
+    <div class="lens-overlay" id="lensOverlay"></div>
+
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-container">
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Expertise</a>
+            <a href="projects_showcase.html">Projects</a>
+            <a href="memories.html" class="active">Memories</a>
+            <a href="contact_inquiry.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1 class="page-title glitch-text">Life & Events</h1>
+            <span class="page-subtitle">Captured Moments</span>
+        </div>
+
+        <div class="memories-grid" id="memoriesGrid">
+            <!-- No Memories Placeholder -->
+            <div class="no-memories-placeholder">
+                <h2>No memories found</h2>
+                <p>Will Be Displayed Once Admin Adds Them</p>
+            </div>
+
+            <!-- Admin Template (Hidden) -->
+            <div class="memory-card admin-template" id="memoryTemplate" style="display: none;">
+                <div class="memory-img-wrapper">
+                    <img src="" alt="Moment" />
+                </div>
+                <div class="memory-info">
+                    <h3 class="memory-title"></h3>
+                    <p class="memory-desc"></p>
+                    <div class="tags">
+                        <span class="tag tag-blue">#Moment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Admin Reset (Only visible in Admin Mode via CSS) -->
+    <button onclick="if(window.portfolio) window.portfolio.resetPage()" 
+            class="admin-only-reset" 
+            style="display: none; position: fixed; top: 20px; right: 20px; z-index: 9999; background: var(--admin-danger); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 20px rgba(255,0,85,0.4);">
+        FORCE RESET PAGE
+    </button>
+
+    <script src="../js/ai_brain.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Lens Effect Script
+        const lens = document.getElementById('lensOverlay');
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 100;
+            const y = (e.clientY / window.innerHeight) * 100;
+            lens.style.setProperty('--x', x + '%');
+            lens.style.setProperty('--y', y + '%');
+        });
+
+        // Emergency Reset for "Ghost" Items
+        // If you see items that shouldn't be there, run 'portfolio.resetPage()' in console
+        // or click the secret button below in Admin Mode.
+        window.addEventListener('load', () => {
+            if (window.portfolio) {
+                window.portfolio.resetPage = function() {
+                    if (confirm("This will permanently clear all saved edits for THIS page. Continue?")) {
+                        localStorage.removeItem(`portfolio_content_${window.location.pathname}`);
+                        location.reload();
+                    }
+                };
+            }
+        });
+    </script>
+</body>
+
+</html>

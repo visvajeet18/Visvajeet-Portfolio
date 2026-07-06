@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visvajeet Raj | Data Science, ML & Cyber Security</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Visvajeet Raj - Pre-final year engineering student specializing in Data Science, Machine Learning, AI models, and Cyber Security. Discover projects like PlastiCraft, FiberX, and FeedFit." />
+    <meta name="keywords" content="Visvajeet Raj, visvajeet, visvajeet engineer, visva, visva engineer, visvajeet raj engineer, visvajeet portfolio, visvajeet data scientist, visvajeet cyber security, Data Science, Machine Learning, Cyber Security, Artificial Intelligence, GenAI, Azure AI, PlastiCraft, FiberX, FeedFit, Portfolio, Web Developer" />
+    <meta name="author" content="Visvajeet Raj" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visvajeet.netlify.app/index.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://visvajeet.netlify.app/index.html" />
+    <meta property="og:title" content="Visvajeet Raj | Data Science, ML & Cyber Security" />
+    <meta property="og:description" content="Explore the portfolio of Visvajeet Raj - bridging advanced predictive models with secure, zero-trust architectures." />
+    <meta property="og:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+    <meta property="og:site_name" content="Visvajeet Raj Portfolio" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://visvajeet.netlify.app/index.html" />
+    <meta property="twitter:title" content="Visvajeet Raj | Data Science, ML & Cyber Security" />
+    <meta property="twitter:description" content="Explore the portfolio of Visvajeet Raj - bridging advanced predictive models with secure, zero-trust architectures." />
+    <meta property="twitter:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://visvajeet.netlify.app/#person",
+          "name": "Visvajeet Raj",
+          "url": "https://visvajeet.netlify.app/",
+          "sameAs": [
+            "https://linkedin.com/in/visvajeet-raj-ai",
+            "https://www.instagram.com/ich_bin_conqueror"
+          ],
+          "jobTitle": "Data Science & Cyber Security Specialist",
+          "knowsAbout": [
+            "Data Science",
+            "Machine Learning",
+            "Generative AI",
+            "Azure AI",
+            "Cyber Security",
+            "Zero-Trust Architecture",
+            "Penetration Testing"
+          ],
+          "description": "Pre-final year engineering student focusing on bridging advanced AI and machine learning models with robust, secure systems architecture."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://visvajeet.netlify.app/#website",
+          "url": "https://visvajeet.netlify.app/",
+          "name": "Visvajeet Raj Portfolio",
+          "description": "Professional portfolio website showcasing projects and expertise in AI, ML, Data Science, and Cyber Security.",
+          "author": {
+            "@id": "https://visvajeet.netlify.app/#person"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --accent-blue: #3b82f6;
+            --accent-teal: #10b981;
+            --accent-purple: #8b5cf6;
+            --text-heading: #f3f4f6;
+            --text-body: #9ca3af;
+            --border-light: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Background - Cyber Grid */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+            background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .cyber-grid {
+            position: absolute;
+            bottom: -50vh;
+            left: -50vw;
+            width: 200vw;
+            height: 200vh;
+            background-image:
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(600px) rotateX(60deg);
+            animation: gridMove 15s linear infinite;
+        }
+
+        .grid-fade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, var(--bg-primary) 0%, transparent 40%, var(--bg-primary) 100%);
+        }
+
+        .data-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            box-shadow: 0 0 12px 2px var(--accent-teal);
+            animation: pulseNode 4s infinite alternate;
+        }
+
+        .node-1 {
+            top: 25%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .node-2 {
+            top: 65%;
+            left: 85%;
+            background: var(--accent-purple);
+            box-shadow: 0 0 12px 2px var(--accent-purple);
+            animation-delay: 1.5s;
+        }
+
+        .node-3 {
+            top: 75%;
+            left: 25%;
+            animation-delay: 3s;
+        }
+
+        .node-4 {
+            top: 35%;
+            left: 75%;
+            background: var(--accent-purple);
+            box-shadow: 0 0 12px 2px var(--accent-purple);
+            animation-delay: 0.5s;
+        }
+
+        .node-5 {
+            top: 50%;
+            left: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 12px 2px var(--accent-blue);
+            animation-delay: 2s;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: perspective(600px) rotateX(60deg) translateY(0);
+            }
+
+            100% {
+                transform: perspective(600px) rotateX(60deg) translateY(50px);
+            }
+        }
+
+        @keyframes pulseNode {
+            0% {
+                transform: scale(1) translateY(0);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(1.5) translateY(-20px);
+                opacity: 0.9;
+            }
+        }
+
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 120px 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .hero-greeting {
+            color: var(--accent-teal);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-title {
+            color: var(--text-heading);
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 0 0 1.5rem 0;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.8;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            filter: brightness(1.1);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .nav-container {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .nav-bar {
+                padding: 1rem 0;
+            }
+        }
+
+        /* Metallic Bot Redesign */
+        .metal-bot-container {
+            position: relative;
+            margin: 4rem auto 2rem;
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 50;
+            perspective: 800px;
+        }
+
+        /* The Head */
+        .metal-head {
+            width: 140px;
+            height: 100px;
+            background: linear-gradient(135deg, #e5e7eb, #9ca3af, #374151);
+            border-radius: 20px;
+            border: 2px solid #1f2937;
+            box-shadow:
+                inset 0 15px 25px rgba(255, 255, 255, 0.8),
+                inset -10px -10px 20px rgba(0, 0, 0, 0.6),
+                0 15px 25px rgba(0, 0, 0, 0.5),
+                0 -10px 30px rgba(216, 180, 254, 0.4);
+            /* Purple top glow */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            animation: floatHead 4s infinite ease-in-out;
+            padding: 10px;
+        }
+
+        @keyframes floatHead {
+
+            0%,
+            100% {
+                transform: translateY(0) rotateX(5deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotateX(-5deg);
+            }
+        }
+
+        /* The Face Screen */
+        .metal-face {
+            width: 100%;
+            height: 100%;
+            background: #030712;
+            border-radius: 12px;
+            box-shadow:
+                inset 0 0 20px #000,
+                0 2px 5px rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid #1f2937;
+        }
+
+        /* Screen Reflection */
+        .metal-face::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+            transform: rotate(-15deg) translateY(-20px);
+            pointer-events: none;
+        }
+
+        /* Glowing Eyes */
+        .white-eye {
+            width: 26px;
+            height: 26px;
+            background: #00f0ff;
+            border-radius: 50%;
+            box-shadow:
+                0 0 15px 5px rgba(0, 240, 255, 0.8),
+                0 0 30px 10px rgba(0, 240, 255, 0.4);
+            transition: transform 0.05s ease-out;
+            /* For JS tracking */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* The Tiny Body */
+        .metal-torso {
+            width: 60px;
+            height: 50px;
+            background: linear-gradient(135deg, #d1d5db, #4b5563, #111827);
+            border-radius: 30px 30px 40px 40px;
+            margin-top: -10px;
+            z-index: 2;
+            box-shadow:
+                inset 0 10px 15px rgba(255, 255, 255, 0.5),
+                inset -5px -5px 15px rgba(0, 0, 0, 0.8),
+                0 10px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .metal-legs {
+            display: flex;
+            gap: 5px;
+            margin-top: -5px;
+            z-index: 1;
+        }
+
+        .metal-leg {
+            width: 12px;
+            height: 25px;
+            background: linear-gradient(to bottom, #4b5563, #111827);
+            border-radius: 6px;
+            box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.3);
+        }
+
+        /* The Cube Pedestal */
+        .metal-cube {
+            width: 140px;
+            height: 120px;
+            background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 30%, #374151 70%, #111827 100%);
+            border-radius: 8px;
+            margin-top: -10px;
+            z-index: 0;
+            box-shadow:
+                inset 0 2px 10px rgba(255, 255, 255, 0.8),
+                inset -5px -5px 15px rgba(0, 0, 0, 0.6),
+                0 30px 40px rgba(0, 0, 0, 0.4),
+                0 40px 60px -10px rgba(216, 180, 254, 0.3);
+            /* Purple floor glow */
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-bg">
+        <div class="cyber-grid"></div>
+        <div class="grid-fade"></div>
+        <div class="data-node node-1"></div>
+        <div class="data-node node-2"></div>
+        <div class="data-node node-3"></div>
+        <div class="data-node node-4"></div>
+        <div class="data-node node-5"></div>
+    </div>
+
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-container">
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/skills.html">Expertise</a>
+            <a href="pages/projects_showcase.html">Projects</a>
+            <a href="pages/memories.html">Memories</a>
+            <a href="pages/contact_inquiry.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-greeting">Welcome to my portfolio</span>
+            <h1 class="hero-title glitch-text">Visvajeet Raj<br><span>Data & Security</span></h1>
+            <p class="hero-description">
+                Bridging the gap between advanced predictive models and impenetrable secure architectures. Specializing
+                in Data Science, Machine Learning, and Cyber Security.
+            </p>
+
+            <div class="quick-stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">5+</span>
+                    <span class="stat-label">AI Models</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Security Audits</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">GenAI</span>
+                    <span class="stat-label">Specialist</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Azure</span>
+                    <span class="stat-label">AI Certified</span>
+                </div>
+            </div>
+
+            <!-- Metallic Cube Bot matching image -->
+            <div class="metal-bot-container" id="cyberRobot">
+                <div class="metal-head">
+                    <div class="metal-face">
+                        <div class="white-eye"></div>
+                        <div class="white-eye"></div>
+                    </div>
+                </div>
+                <div class="metal-torso"></div>
+                <div class="metal-legs">
+                    <div class="metal-leg"></div>
+                    <div class="metal-leg"></div>
+                </div>
+                <!-- The pedestal block -->
+                <div class="metal-cube"></div>
+            </div>
+
+            <a href="pages/about.html" class="btn-primary">View Profile</a>
+        </div>
+    </section>
+
+    <!-- Global UI Click Sound -->
+    <script src="js/ai_brain.js"></script>
+    <script src="js/main.js"></script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+
+<script>
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Target the glowing white eyes
+        const eyes = document.querySelectorAll('.white-eye');
+
+        eyes.forEach(eye => {
+            // Get the center of the face container to calculate angle
+            const face = eye.parentElement.getBoundingClientRect();
+            const faceCenterX = face.left + face.width / 2;
+            const faceCenterY = face.top + face.height / 2;
+
+            const angle = Math.atan2(mouseY - faceCenterY, mouseX - faceCenterX);
+
+            // Max eye movement inside their fixed sockets
+            const maxDistance = 6;
+            const moveX = Math.cos(angle) * maxDistance;
+            const moveY = Math.sin(angle) * maxDistance;
+
+            eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    });
+</script>
+
+</html>

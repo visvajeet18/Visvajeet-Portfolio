@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Visvajeet Raj</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Visvajeet Raj, a Data Science, Machine Learning, and Cyber Security engineering student. Discover his research philosophy, academic background, and professional certifications." />
+    <meta name="keywords" content="Visvajeet Raj, About Visvajeet Raj, visvajeet, visvajeet engineer, visva, visva engineer, visvajeet raj engineer, visvajeet portfolio, visvajeet data scientist, visvajeet cyber security, Data Science Scholar, Cyber Security Certifications, AI Developer, Student Portfolio" />
+    <meta name="author" content="Visvajeet Raj" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visvajeet.netlify.app/pages/about.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://visvajeet.netlify.app/pages/about.html" />
+    <meta property="og:title" content="About Visvajeet Raj | Data Science & Security Professional" />
+    <meta property="og:description" content="Read about Visvajeet's academic achievements, certifications (Data Scientist & Cyber Security Expert), and practical engineering approach." />
+    <meta property="og:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://visvajeet.netlify.app/pages/about.html" />
+    <meta property="twitter:title" content="About Visvajeet Raj | Data Science & Security Professional" />
+    <meta property="twitter:description" content="Read about Visvajeet's academic achievements, certifications (Data Scientist & Cyber Security Expert), and practical engineering approach." />
+    <meta property="twitter:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --accent-blue: #3b82f6;
+            --accent-teal: #10b981;
+            --accent-purple: #8b5cf6;
+            --text-heading: #f3f4f6;
+            --text-body: #9ca3af;
+            --border-light: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Ambient Background - Data Stream */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+            background: var(--bg-primary);
+        }
+
+        .data-stream {
+            position: absolute;
+            top: -150%;
+            width: 24px;
+            font-family: 'JetBrains Mono', monospace, sans-serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: var(--accent-teal);
+            opacity: 0.15;
+            text-shadow: 0 0 8px var(--accent-teal);
+            word-break: break-all;
+            animation: fall linear infinite;
+        }
+
+        .stream-1 {
+            left: 15%;
+            animation-duration: 25s;
+            animation-delay: 0s;
+        }
+
+        .stream-2 {
+            left: 35%;
+            color: var(--accent-blue);
+            opacity: 0.1;
+            text-shadow: 0 0 8px var(--accent-blue);
+            animation-duration: 35s;
+            animation-delay: -10s;
+            font-size: 20px;
+        }
+
+        .stream-3 {
+            left: 55%;
+            animation-duration: 28s;
+            animation-delay: -5s;
+            font-size: 14px;
+        }
+
+        .stream-4 {
+            left: 75%;
+            color: var(--accent-purple);
+            opacity: 0.12;
+            text-shadow: 0 0 8px var(--accent-purple);
+            animation-duration: 40s;
+            animation-delay: -20s;
+        }
+
+        .stream-5 {
+            left: 90%;
+            animation-duration: 30s;
+            animation-delay: -15s;
+            font-size: 18px;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(300vh);
+            }
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            padding: 0 2rem;
+        }
+
+        .nav-bar a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            transition: width 0.3s ease;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            color: var(--text-heading);
+        }
+
+        .nav-bar a:hover::after,
+        .nav-bar a.active::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .page-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-header {
+            margin-bottom: 4rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page-title {
+            color: var(--text-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .page-subtitle {
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Layout */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: start;
+            animation: fadeUp 1s ease-out 0.2s both;
+        }
+
+        @media(min-width: 900px) {
+            .about-grid {
+                grid-template-columns: 2fr 3fr;
+            }
+        }
+
+        /* Profile Photo Container */
+        .photo-container {
+            position: relative;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .img-border-effect {
+            position: relative;
+            border-radius: 16px;
+            padding: 6px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-teal));
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .img-border-effect:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);
+        }
+
+        .profile-img {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 12px;
+            filter: grayscale(0%) contrast(105%);
+        }
+
+        /* Content Text */
+        .about-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .greeting {
+            font-size: 2rem;
+            color: var(--text-heading);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--text-heading);
+            font-weight: 500;
+        }
+
+        /* Credentials Section */
+        .credentials {
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .cert-title {
+            color: var(--text-heading);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .cert-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .cert-icon {
+            font-size: 1.5rem;
+        }
+
+        .cert-name {
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        .cert-desc {
+            font-size: 0.9rem;
+            color: var(--text-body);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Profile Sidebar Layout */
+        .photo-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        /* Profile Sidebar Layout */
+        .photo-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        /* Decorative Philosophy Card */
+        .philosophy-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(10, 14, 23, 0.9));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out 0.8s both;
+            overflow: hidden;
+        }
+
+        .philosophy-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .philosophy-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-teal));
+        }
+
+        .philosophy-text {
+            color: var(--text-body);
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .philosophy-highlight {
+            color: var(--text-heading);
+            font-weight: 500;
+        }
+
+        /* Detailed Bio Box Styling */
+        .detailed-bio-box {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.4), rgba(59, 130, 246, 0.05));
+            border-left: 4px solid var(--accent-purple);
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .detailed-bio-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 60%);
+            pointer-events: none;
+        }
+
+        .detailed-bio-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-body);
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+
+        .bio-highlight-blue {
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+        }
+
+        .bio-highlight-teal {
+            color: var(--accent-teal);
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+        }
+
+        .bio-highlight-purple {
+            color: var(--accent-purple);
+            font-weight: 600;
+            text-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+        }
+
+        .bio-highlight-white {
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-bg">
+        <div class="data-stream stream-1">01001011 01100101 01100101 01110000 00100000 01101101 01101111 01110110
+            01101001 01101110 01100111 01001011 01100101 01100101 01110000</div>
+        <div class="data-stream stream-2">10110100 01101001 10010100 01110101 00101000 01010101 10101010 01010101
+            11010100 01010101</div>
+        <div class="data-stream stream-3">01100100 01100001 01110100 01100001 01110011 01100101 01100011 01010100
+            11111100</div>
+        <div class="data-stream stream-4">11010010 10010010 01001001 11010010 10010101 11100101 10101010 00101010
+            00010010</div>
+        <div class="data-stream stream-5">01100011 01111001 01100010 01100101 01110010 10101010 01101110 01100101
+            01110100</div>
+    </div>
+
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-container">
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Expertise</a>
+            <a href="projects_showcase.html">Projects</a>
+            <a href="memories.html">Memories</a>
+            <a href="contact_inquiry.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1 class="page-title">About Me</h1>
+            <span class="page-subtitle">Professional Background</span>
+        </div>
+
+        <div class="about-grid">
+            <div class="photo-container">
+                <div class="photo-sidebar">
+                    <div class="img-border-effect">
+                        <img src="me.jpg" alt="Visvajeet Raj" class="profile-img"
+                            onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" />
+                    </div>
+
+                    <!-- Decorative Philosophy Card -->
+                    <div class="philosophy-card">
+                        <p class="philosophy-text">
+                            "Securing the future <br>by <span class="philosophy-highlight">understanding the data</span>
+                            of today."
+                        </p>
+                    </div>
+
+                    <div class="credentials"
+                        style="margin-top: 0; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+                        <h3 class="cert-title">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="color: var(--accent-blue);">
+                                <path d="M12 15l8-4.5-8-4.5-8 4.5 8 4.5z"></path>
+                                <path d="M12 15v6"></path>
+                                <path d="M16 17.2v3.8"></path>
+                                <path d="M8 17.2v3.8"></path>
+                            </svg>
+                            Master Certifications
+                        </h3>
+                        <div class="cert-list">
+                            <a href="https://pdf.ms.credential.net/certificate/pdf?env=production&credential=ho5kdrbw"
+                                target="_blank" rel="noopener noreferrer" class="cert-item">
+                                <span class="cert-icon">🔒</span>
+                                <span class="cert-name">Master Certificate</span>
+                                <span class="cert-desc"
+                                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Cyber
+                                    Security Expert</span>
+                            </a>
+                            <a href="https://pdf.credential.net/54kwdefz_1753856382841.pdf" target="_blank"
+                                rel="noopener noreferrer" class="cert-item">
+                                <span class="cert-icon">📊</span>
+                                <span class="cert-name">Master Certificate</span>
+                                <span class="cert-desc">Data Scientist</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Resume Corner -->
+                    <div style="text-align: center; padding-top: 0.5rem; margin-top: -1rem;">
+                        <a href="resume.pdf" target="_blank"
+                            style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.9rem 1.8rem; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue); border-radius: 8px; font-weight: 500; text-decoration: none; transition: all 0.3s ease; width: 100%; box-sizing: border-box;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h2 class="greeting">Hello, I'm Visvajeet.</h2>
+                <p class="bio-text">
+                    I am a multifaceted technical professional with deep expertise spanning <span class="highlight">Data
+                        Science, Machine Learning, and Cyber Security</span>. Throughout my academic and professional
+                    journey, I have focused on solving complex data problems while securely architecting the systems
+                    that house them.
+                </p>
+                <p class="bio-text">
+                    My philosophy is that modern applications must not only be intelligent and data-rich, but
+                    fundamentally secure from the ground up. I build robust algorithms that predict and adapt, alongside
+                    impenetrable protocols that protect critical information.
+                </p>
+
+                <div class="detailed-bio-box">
+                    <p class="detailed-bio-text">
+                        I’m an AI and technology enthusiast driven by the belief that innovation should be <span
+                            class="bio-highlight-teal">practical, sustainable, and deeply human-centered</span>. As a
+                        pre-final year engineering student with a strong academic foundation and hands-on experience in
+                        AI, web development, and data systems, I constantly explore the intersection of intelligent
+                        systems and real-world impact. My journey spans across <span
+                            class="bio-highlight-blue">Generative AI</span>, <span class="bio-highlight-blue">Azure
+                            AI</span>, <span class="bio-highlight-purple">MongoDB</span>, <span
+                            class="bio-highlight-purple">SQL</span>, <span class="bio-highlight-blue">Python</span>, and
+                        full-stack web development, but what truly defines me is my obsession with building <span
+                            class="bio-highlight-white">original solutions</span>. From developing eco-focused material
+                        innovations like regenerative fabrics and plastic recycling concepts to designing wearable
+                        health-tech systems and smart post-surgical devices, I aim to create projects that are not just
+                        technically strong but <span class="bio-highlight-purple">socially meaningful</span>. I enjoy
+                        transforming complex ideas into structured, implementable systems—whether it’s building a
+                        digital wallet database system, crafting data-driven dashboards, or designing visually polished,
+                        professional web interfaces from scratch. I believe in clean execution, long-term vision, and
+                        solutions that blend <span class="bio-highlight-teal">sustainability, intelligence, and
+                            usability</span>. For me, technology isn’t just about code; it’s about <span
+                            class="bio-highlight-white">designing the future with responsibility, creativity, and
+                            precision</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global UI Click Sound -->
+        <script src="../js/ai_brain.js"></script>
+        <script src="../js/main.js"></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

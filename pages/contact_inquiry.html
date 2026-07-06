@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Visvajeet Raj</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Visvajeet Raj. Reach out for collaboration in Data Science, ML models, cybersecurity audits, or freelance software consulting." />
+    <meta name="keywords" content="Contact Visvajeet Raj, visvajeet, visvajeet engineer, visva, visva engineer, visvajeet raj engineer, visvajeet portfolio, visvajeet data scientist, visvajeet cyber security, Freelance AI Developer, Cybersecurity Consultant, Hire Machine Learning Engineer" />
+    <meta name="author" content="Visvajeet Raj" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visvajeet.netlify.app/pages/contact_inquiry.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://visvajeet.netlify.app/pages/contact_inquiry.html" />
+    <meta property="og:title" content="Contact & Inquiry | Visvajeet Raj" />
+    <meta property="og:description" content="Reach out directly for freelance opportunities, consulting, research project inquiries, or professional networking." />
+    <meta property="og:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://visvajeet.netlify.app/pages/contact_inquiry.html" />
+    <meta property="twitter:title" content="Contact & Inquiry | Visvajeet Raj" />
+    <meta property="twitter:description" content="Reach out directly for freelance opportunities, consulting, research project inquiries, or professional networking." />
+    <meta property="twitter:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --accent-blue: #3b82f6;
+            --accent-teal: #10b981;
+            --accent-purple: #8b5cf6;
+            --text-heading: #f3f4f6;
+            --text-body: #9ca3af;
+            --border-light: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Background - Radar Signal */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+            background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .signal-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px solid var(--accent-blue);
+            opacity: 0;
+            animation: ping 12s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .ring-1 {
+            animation-delay: 0s;
+        }
+
+        .ring-2 {
+            animation-delay: 3s;
+            border-color: var(--accent-purple);
+        }
+
+        .ring-3 {
+            animation-delay: 6s;
+            border-color: var(--accent-teal);
+        }
+
+        .ring-4 {
+            animation-delay: 9s;
+        }
+
+        @keyframes ping {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.3;
+            }
+
+            100% {
+                width: 150vw;
+                height: 150vw;
+                opacity: 0;
+            }
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            padding: 0 2rem;
+        }
+
+        .nav-bar a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            transition: width 0.3s ease;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            color: var(--text-heading);
+        }
+
+        .nav-bar a:hover::after,
+        .nav-bar a.active::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .page-header {
+            margin-bottom: 4rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page-title {
+            color: var(--text-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+        }
+
+        .page-subtitle {
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-description {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            color: var(--text-body);
+            line-height: 1.8;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        /* Freelance Status Banner */
+        .freelance-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--accent-teal);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            margin: 0 auto 4rem auto;
+            animation: fadeUp 1s ease-out 0.3s both;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-teal);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-teal);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        .freelance-text {
+            color: var(--text-heading);
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            animation: fadeUp 1s ease-out 0.4s both;
+        }
+
+        @media(min-width: 600px) {
+            .links-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .contact-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-heading);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .contact-card:hover .icon-wrapper {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+        }
+
+        .icon-wrapper svg {
+            width: 32px;
+            height: 32px;
+            color: var(--accent-blue);
+        }
+
+        .card-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-value {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Custom Cursor Tracking Aura */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+            mix-blend-mode: screen;
+        }
+
+        /* Enlarge aura when hovering over contact cards */
+        .page-container:hover~.cursor-glow,
+        .contact-card:hover~.cursor-glow {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.05) 40%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-bg">
+        <div class="signal-ring ring-1"></div>
+        <div class="signal-ring ring-2"></div>
+        <div class="signal-ring ring-3"></div>
+        <div class="signal-ring ring-4"></div>
+    </div>
+
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-container">
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Expertise</a>
+            <a href="projects_showcase.html">Projects</a>
+            <a href="memories.html">Memories</a>
+            <a href="contact_inquiry.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1 class="page-title">Get in Touch</h1>
+            <span class="page-subtitle">Let's Connect</span>
+        </div>
+
+        <p class="contact-description">
+            I am always open to discussing data-driven security solutions, machine learning integrations, or
+            collaborative research opportunities. Reach out via any of the direct channels below.
+        </p>
+
+        <div class="freelance-banner">
+            <div class="status-dot"></div>
+            <span class="freelance-text">Available for Freelance Projects & Consulting</span>
+        </div>
+
+        <div class="links-grid">
+
+            <!-- Email -->
+            <a href="mailto:visvajeetraj@gmail.com" class="contact-card">
+                <div class="icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card-label">Email</div>
+                <div class="card-value">visvajeetraj@gmail.com</div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+918610006514" class="contact-card">
+                <div class="icon-wrapper">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="card-label">Phone</div>
+                <div class="card-value">+91 8610006514</div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/visvajeet-raj-ai" target="_blank" rel="noopener noreferrer"
+                class="contact-card">
+                <div class="icon-wrapper">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </div>
+                <div class="card-label">LinkedIn</div>
+                <div class="card-value">Connect Professional Network</div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ich_bin_conqueror?utm_source=qr" target="_blank"
+                rel="noopener noreferrer" class="contact-card">
+                <div class="icon-wrapper">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </div>
+                <div class="card-label">Instagram</div>
+                <div class="card-value">View Visual Log</div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- The Tracking Aura -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <script>
+        const cursorGlow = document.getElementById('cursorGlow');
+
+        // Use requestAnimationFrame for smooth 60fps tracking
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let glowX = mouseX;
+        let glowY = mouseY;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateGlow() {
+            // Smooth easing math
+            glowX += (mouseX - glowX) * 0.1;
+            glowY += (mouseY - glowY) * 0.1;
+
+            cursorGlow.style.transform = `translate(calc(${glowX}px - 50%), calc(${glowY}px - 50%))`;
+
+            requestAnimationFrame(animateGlow);
+        }
+
+        animateGlow();
+    </script>
+    <!-- Global UI Click Sound -->
+    <script src="../js/ai_brain.js"></script>
+    <script src="../js/main.js"></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>

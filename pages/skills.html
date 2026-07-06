@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills - Visvajeet Raj</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Technical disciplines and skills of Visvajeet Raj. Expertise includes Generative AI, predictive modeling, RAG architecture, deep learning, zero-trust network security, and cloud technologies." />
+    <meta name="keywords" content="Visvajeet Raj Skills, visvajeet, visvajeet engineer, visva, visva engineer, visvajeet raj engineer, visvajeet portfolio, visvajeet data scientist, visvajeet cyber security, Data Science Tools, Machine Learning Frameworks, Cyber Security Skills, Zero-Trust Architecture, PyTorch, LangChain, Azure Cloud" />
+    <meta name="author" content="Visvajeet Raj" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://visvajeet.netlify.app/pages/skills.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://visvajeet.netlify.app/pages/skills.html" />
+    <meta property="og:title" content="Core Expertise & Technical Skills | Visvajeet Raj" />
+    <meta property="og:description" content="Explore Visvajeet's skill matrix: from MLOps and transformer models to DevSecOps, Azure Cloud Native systems, and penetration testing." />
+    <meta property="og:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://visvajeet.netlify.app/pages/skills.html" />
+    <meta property="twitter:title" content="Core Expertise & Technical Skills | Visvajeet Raj" />
+    <meta property="twitter:description" content="Explore Visvajeet's skill matrix: from MLOps and transformer models to DevSecOps, Azure Cloud Native systems, and penetration testing." />
+    <meta property="twitter:image" content="https://visvajeet.netlify.app/public/seo-banner.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <style>
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --accent-blue: #3b82f6;
+            --accent-teal: #10b981;
+            --accent-purple: #8b5cf6;
+            --text-heading: #f3f4f6;
+            --text-body: #9ca3af;
+            --border-light: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-body);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Background - Neural Orbit */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+            background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .neural-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.3);
+            animation: pulseCenter 4s infinite alternate ease-in-out;
+        }
+
+        .orbit-path {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px dashed rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-1 {
+            width: 350px;
+            height: 350px;
+            animation: spin 25s linear infinite;
+        }
+
+        .orbit-2 {
+            width: 550px;
+            height: 550px;
+            animation: spin 40s linear infinite reverse;
+        }
+
+        .orbit-3 {
+            width: 800px;
+            height: 800px;
+            animation: spin 60s linear infinite;
+        }
+
+        .neural-node {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+            box-shadow: 0 0 10px 2px var(--accent-teal);
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .orbit-2 .neural-node {
+            background: var(--accent-purple);
+            box-shadow: 0 0 10px 2px var(--accent-purple);
+            top: 50%;
+            left: -3px;
+            transform: translateY(-50%);
+        }
+
+        .orbit-3 .neural-node {
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px 2px var(--accent-blue);
+            top: auto;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes spin {
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes pulseCenter {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0.9;
+                box-shadow: 0 0 30px 8px rgba(59, 130, 246, 0.5);
+            }
+        }
+
+        /* Navigation */
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(10, 14, 23, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            padding: 0 2rem;
+        }
+
+        .nav-bar a {
+            color: var(--text-body);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            transition: width 0.3s ease;
+        }
+
+        .nav-bar a:hover,
+        .nav-bar a.active {
+            color: var(--text-heading);
+        }
+
+        .nav-bar a:hover::after,
+        .nav-bar a.active::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .page-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page-title {
+            color: var(--text-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+        }
+
+        .page-subtitle {
+            color: var(--accent-teal);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Skills Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            animation: fadeUp 1s ease-out 0.2s both;
+        }
+
+        @media(min-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            color: var(--accent-blue);
+        }
+
+        .category-title {
+            color: var(--text-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-body);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--border-light);
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--text-heading);
+            border-color: var(--accent-blue);
+            transform: scale(1.05);
+        }
+
+        /* Specific Color Accents */
+        .cat-data .category-icon {
+            color: var(--accent-purple);
+        }
+
+        .cat-data:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .cat-data .skill-tag:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--accent-purple);
+        }
+
+        .cat-cyber .category-icon {
+            color: var(--accent-teal);
+        }
+
+        .cat-cyber:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+
+        .cat-cyber .skill-tag:hover {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--accent-teal);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-bg">
+        <div class="neural-center"></div>
+        <div class="orbit-path orbit-1">
+            <div class="neural-node"></div>
+        </div>
+        <div class="orbit-path orbit-2">
+            <div class="neural-node"></div>
+        </div>
+        <div class="orbit-path orbit-3">
+            <div class="neural-node"></div>
+        </div>
+    </div>
+
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-container">
+            <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Expertise</a>
+            <a href="projects_showcase.html">Projects</a>
+            <a href="memories.html">Memories</a>
+            <a href="contact_inquiry.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="page-header">
+            <h1 class="page-title">Core Expertise</h1>
+            <span class="page-subtitle">Technical Disciplines</span>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Data Science -->
+            <div class="skill-category cat-data">
+                <div class="category-header">
+                    <span class="category-icon">📊</span>
+                    <h2 class="category-title">Data Science & Analytics</h2>
+                </div>
+                <div class="tag-cloud">
+                    <span class="skill-tag">Generative AI (GenAI)</span>
+                    <span class="skill-tag">Predictive Modeling</span>
+                    <span class="skill-tag">Vector Databases</span>
+                    <span class="skill-tag">RAG Architecture</span>
+                    <span class="skill-tag">Pandas / NumPy</span>
+                    <span class="skill-tag">PowerBI / Tableau</span>
+                    <span class="skill-tag">Big Data Systems</span>
+                </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-category cat-data">
+                <div class="category-header">
+                    <span class="category-icon">🧠</span>
+                    <h2 class="category-title">Machine Learning & AI</h2>
+                </div>
+                <div class="tag-cloud">
+                    <span class="skill-tag">LLM Fine-tuning</span>
+                    <span class="skill-tag">LangChain / LlamaIndex</span>
+                    <span class="skill-tag">Deep Learning (CNN/RNN)</span>
+                    <span class="skill-tag">PyTorch / TensorFlow</span>
+                    <span class="skill-tag">Transformers / BERT</span>
+                    <span class="skill-tag">NLP / Computer Vision</span>
+                    <span class="skill-tag">MLOps Lifecycle</span>
+                </div>
+            </div>
+
+            <!-- Cyber Security -->
+            <div class="skill-category cat-cyber">
+                <div class="category-header">
+                    <span class="category-icon">🛡️</span>
+                    <h2 class="category-title">Cyber Security</h2>
+                </div>
+                <div class="tag-cloud">
+                    <span class="skill-tag">Zero-Trust Architecture</span>
+                    <span class="skill-tag">Cloud Security (Azure/AWS)</span>
+                    <span class="skill-tag">Penetration Testing</span>
+                    <span class="skill-tag">Threat Intelligence</span>
+                    <span class="skill-tag">Vulnerability Assessment</span>
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">DevSecOps Integration</span>
+                </div>
+            </div>
+
+            <!-- Development -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <span class="category-icon">⚙️</span>
+                    <h2 class="category-title">Software Development</h2>
+                </div>
+                <div class="tag-cloud">
+                    <span class="skill-tag">Python (AI focus)</span>
+                    <span class="skill-tag">Next.js / TypeScript</span>
+                    <span class="skill-tag">Node.js / Express</span>
+                    <span class="skill-tag">RESTful APIs / GraphQL</span>
+                    <span class="skill-tag">Docker / Kubernetes</span>
+                    <span class="skill-tag">GitHub Actions CI/CD</span>
+                    <span class="skill-tag">MongoDB / PostgreSQL</span>
+                    <span class="skill-tag">Azure Cloud Native</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Global UI Click Sound -->
+    <script src="../js/ai_brain.js"></script>
+    <script src="../js/main.js"></script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
